@@ -47,9 +47,9 @@ ipBanList = []
 # init praw and log in
 #----------------------
 def login ():
-    handler = MultiprocessHandler()
+
     if MULTIPROCESS:
-        r=praw.Reddit("/u/boib ipWatcher", handler=handler)
+        r=praw.Reddit("/u/boib ipWatcher", MultiprocessHandler())
     else:
         r=praw.Reddit("/u/boib ipWatcher")
 
